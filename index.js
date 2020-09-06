@@ -49,7 +49,7 @@ app.post('/url'
         delayMs: 500,
     }), rateLimit({
         windowMs: 30 * 1000,
-        max: 1,
+        max: 15,
     })
     , async (req, res, next) => {
         let { slug, url } = req.body
