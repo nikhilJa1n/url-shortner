@@ -8,6 +8,7 @@
 </p>
 
 <p align="center">It's a full stack app made with Javascript.</p>
+<p align="center" ><a href="https://url-sh0rtner.herokuapp.com/" rel="Demo">Live Demo</a></p>
 
 ---
 
