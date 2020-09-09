@@ -70,7 +70,7 @@ app.post('/url'
                 url, slug
             }
             const created = await urls.insert(newUrl)
-            created.slug = `${process.env.WEBSITE}:${process.env.PORT}/${slug}`
+            created.slug = process.env.NODE_ENV === 'production' ? `${process.env.WEBSITE}/${slug}` : `htttp://localhost:${process.env.PORT}/${slug}`
             res.json(created)
         } catch (error) {
             next(error)
@@ -102,7 +102,7 @@ if (process.env.NODE_ENV === 'production') {
     });
 }
 
-const port = process.env.PORT || 1337;
+const port = process.env.PORT;
 app.listen(port, () => {
     console.log(`Listening at http://localhost:${port}`);
 })
