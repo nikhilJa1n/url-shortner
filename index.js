@@ -11,7 +11,12 @@ const bodyParser = require('body-parser');
 
 require('dotenv').config()
 
-const db = monk(process.env.MONGO_URL);
+const db = monk(process.env.MONGO_URL, function(err, db){
+    if(err){
+       console.error("Db is not connected", err.message);
+    }
+    console.log(db);
+});
 const urls = db.get('urls');
 urls.createIndex({ slug: 1 }, { unique: true });
 
