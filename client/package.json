@@ -10,6 +10,16 @@
     "react-dom": "^16.13.1",
     "react-scripts": "^5.0.1"
   },
+  "overrides": {
+    "nth-check": "^2.0.1",
+    "underscore": "^1.13.7",
+    "serialize-javascript": "^7.0.5",
+    "postcss": "^8.4.31",
+    "webpack-dev-middleware": "^5.3.4",
+    "webpack-dev-server": "^5.2.6",
+    "uuid": "^11.1.1",
+    "@tootallnate/once": "^2.0.1"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "INLINE_RUNTIME_CHUNK=false react-scripts build",
